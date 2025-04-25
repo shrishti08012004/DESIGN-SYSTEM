@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, userEvent, within } from '@storybook/test';
-import { Header } from '../components/Header'
+import { Header } from './Header'
 import { Page } from '../Page';
 
 const meta = {
@@ -20,7 +20,7 @@ export const LoggedOut: Story = {};
 // More on component testing: https://storybook.js.org/docs/writing-tests/component-testing
 export const LoggedIn: Story = {
   play: async ({canvasElement} ) => {
-    const canvas = within({canvasElement});
+    const canvas = within(canvasElement);
     const loginButton = canvas.getByRole('button', { name: /Log in/i });
     await expect(loginButton).toBeInTheDocument();
     await userEvent.click(loginButton);

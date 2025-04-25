@@ -1,7 +1,13 @@
 
 
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button}  from './Button';
+import { Button } from './Button'; 
+
+
+type ButtonProps = {
+  label: string;
+  variant?: 'primary' | 'secondary';
+};
 
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
@@ -10,7 +16,8 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Button>;
+
+type Story = StoryObj<ButtonProps>;
 
 export const Primary: Story = {
   args: {

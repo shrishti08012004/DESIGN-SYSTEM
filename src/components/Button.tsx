@@ -31,12 +31,14 @@ export type ButtonProps = {
   variant?: 'primary' | 'secondary'; // ✅ This is the missing line
 };
 
-export const Button = ({ label, variant = 'primary' }: ButtonProps) => {
-  const baseStyle = 'px-4 py-2 rounded text-white';
-  const styles = {
-    primary: `${baseStyle} bg-blue-600`,
-    secondary: `${baseStyle} bg-gray-600`,
-  };
+// export const Button = ({ label, variant = 'primary' }: ButtonProps) => {
+//   const baseStyle = 'px-4 py-2 rounded text-white';
+//   const styles = {
+//     primary: `${baseStyle} bg-blue-600`,
+//     secondary: `${baseStyle} bg-gray-600`,
+//   };
 
-  return <button className={styles[variant]}>{label}</button>;
-};
+//   return <button className={styles[variant]}>{label}</button>;
+// };
+
+
